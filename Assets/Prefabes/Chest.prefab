@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 5400327073372251764}
   m_Layer: 0
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,10 +248,9 @@ MonoBehaviour:
   chest: {fileID: 4958574849369945160}
   chestLights: {fileID: 811121731}
   secondLight: {fileID: 1038507580}
-  menu: {fileID: 0}
-  m_Camera: {fileID: 0}
-  isVisible: 0
-  secretsIsReviled: 0
+  cameraSC: {fileID: 0}
+  choise1: {fileID: 1241263423365614898, guid: 4a6c9ce210d5e48e3bdcdd518b04a4ae, type: 3}
+  uimanger: {fileID: 0}
 --- !u!1001 &4958574849369846506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264,8 +263,8 @@ PrefabInstance:
       value: Chest Model
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 51e91b62936ceec4eb83d62af4e55a29, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_TagString
+      value: Chest
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 51e91b62936ceec4eb83d62af4e55a29, type: 3}
       propertyPath: m_LocalPosition.x
