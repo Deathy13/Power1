@@ -8,7 +8,7 @@ public class CameraSC : MonoBehaviour
 {
 
     public Camera mainCamera;
-    public bool itHitHrid;
+    public bool itHitGrid;
     public bool chestSelected;
 
     // Start is called before the first frame update

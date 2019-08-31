@@ -6,11 +6,12 @@ using UnityEngine;
 public class ChestScripts : MonoBehaviour
 {
     public GameObject chest;
-    public GameObject chestLights;
+    public GameObject firstLight;
     public GameObject secondLight;    
     public CameraSC cameraSC;
     public GameObject choise1;
     public UIManager uimanger;
+    public GameObject particalSystem;
 
     // Start is called before the first frame update
 
@@ -45,20 +46,21 @@ public class ChestScripts : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        cameraSC.itHitHrid = true;
-        Debug.Log("isMouseEnteris on chest");
-        if(cameraSC.itHitHrid)
+        cameraSC.itHitGrid = true;
+        
+        if(cameraSC.itHitGrid)
         {
-            chestLights.SetActive(true);
+            Debug.Log("isMouseEnteris on chest");
+            firstLight.SetActive(true);
         }
         else
         {
-            chestLights.SetActive(true);
+            firstLight.SetActive(false);
         }
     }
     void OnMouseExit()
     {
-        cameraSC.itHitHrid = false;
+        cameraSC.itHitGrid = false;
     }
 
 
@@ -71,14 +73,16 @@ public class ChestScripts : MonoBehaviour
     {
         if (cameraSC.chestSelected && uimanger.secret1 == false)
         {
-            chestLights.SetActive(true);
+            
+            secondLight.SetActive(true);
+
             chest.SetActive(true);
             choise1.SetActive(true);
             
         }
         else
         {
-            chestLights.SetActive(false);
+            firstLight.SetActive(false);
              
         }
     }
@@ -89,6 +93,7 @@ public class ChestScripts : MonoBehaviour
         choise1.SetActive(false);
         uimanger.secret1 = true;
         cameraSC.chestSelected = false;
+        particalSystem.SetActive(true);
     }
     public void NotRevelSecrets1()
     {
