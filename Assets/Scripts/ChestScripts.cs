@@ -1,107 +1,99 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Events;
 
 public class ChestScripts : MonoBehaviour
 {
     public GameObject chest;
     public GameObject chestLights;
-    public GameObject secondLight;
-    public GameObject menu;
+    public GameObject secondLight;    
+    public CameraSC cameraSC;
+    public GameObject choise1;
+    public UIManager uimanger;
 
-    public Camera m_Camera;
-
-    public bool isVisible;
-    public bool secretsIsReviled;
     // Start is called before the first frame update
+
+    //UnityEvent m_MyEvent = new UnityEvent();
+
+
     void Start()
     {
         chest.SetActive(false);
-        
+        cameraSC = GameObject.Find("Main Camera").GetComponent<CameraSC>();        
+        uimanger = GameObject.Find("UIManager").GetComponent<UIManager>();
+       // m_MyEvent.AddListener(ShowMenu);
+
     }
+
+    //public void ShowMenu(event)
+    //{
+    //    if (Event.show)
+    //    {
+    //        UIShowUp = false;
+    //    } else
+    //    {
+    //        UIShowUp = true;
+    //    }
+    //
+    //}
 
     // Update is called once per frame
     void Update()
-    {
-        ChestVisble();
-        Selected();
+    {       
+        ChestVisble1();        
     }
-    void ChestVisble()
+    void OnMouseEnter()
     {
-        if (isVisible)
+        cameraSC.itHitHrid = true;
+        Debug.Log("isMouseEnteris on chest");
+        if(cameraSC.itHitHrid)
         {
             chestLights.SetActive(true);
         }
         else
         {
-            chestLights.SetActive(false);
+            chestLights.SetActive(true);
         }
-    }
-    void OnMouseEnter()
-    {
-        isVisible = true;
-        Debug.Log("isMouseEnteris on chest");
     }
     void OnMouseExit()
     {
-        isVisible = false;
+        cameraSC.itHitHrid = false;
     }
 
 
-    void Selected()
+
+
+
+
+
+    void ChestVisble1()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (cameraSC.chestSelected && uimanger.secret1 == false)
         {
-            RaycastHit hit;
-            Ray ray = m_Camera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Chest")
-            {
-                Debug.Log("ClickChest");
-                chest.SetActive(true);
-                secondLight.SetActive(true);
-                if (!secretsIsReviled)
-                {
-                    menu.SetActive(true);
-                }
-
-            }
+            chestLights.SetActive(true);
+            chest.SetActive(true);
+            choise1.SetActive(true);
+            
         }
-
-    }
-    void secretSelected()
-    {
-        
-        chest.SetActive(true);
-        secondLight.SetActive(true);
-        if (!secretsIsReviled)
+        else
         {
-            menu.SetActive(true);
+            chestLights.SetActive(false);
+             
         }
-        menu.SetActive(true);
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            Ray ray = m_Camera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Chest")
-            {
-                Debug.Log("ClickChest");
-                
-                if (!secretsIsReviled)
-                {
-                    
-                }
+    }
 
-            }
-        }
 
-    }
-    public void ShowSecrets()
+    public void RevelSecrets1()
     {
-        secretsIsReviled = true;
-        menu.SetActive(false);
+        choise1.SetActive(false);
+        uimanger.secret1 = true;
+        cameraSC.chestSelected = false;
     }
-    public void DontShowSecrets()
+    public void NotRevelSecrets1()
     {
-        menu.SetActive(false);
+        choise1.SetActive(false);
+        cameraSC.chestSelected = false;
     }
+
 }

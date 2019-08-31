@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class CameraSC : MonoBehaviour
 
-    
+
 {
 
-    Camera mainCamera;
-    public bool isSelected;
+    public Camera mainCamera;
+    public bool itHitHrid;
+    public bool chestSelected;
 
     // Start is called before the first frame update
-    private void Awake()
+    void Awake()
     {
-        camera.GetComponent<Camera>();
+        mainCamera = gameObject.GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        RaycastHit hit;
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Grid")
+        {
+            Debug.Log("I on Grid");
+
+        }
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Grid")
+            
+            
+            if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Chest")
             {
-                
-
+                chestSelected = true;
             }
         }
     }
