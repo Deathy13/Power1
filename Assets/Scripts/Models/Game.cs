@@ -42,6 +42,9 @@ public class Game : MonoBehaviour
     {
         GameObject g = Instantiate(secret, gridPlace.position, Quaternion.identity);
         g.transform.parent = gridPlace.transform;
+
+        GameObject g1 = Instantiate(secret, gridPlace.position + new Vector3(1, 0, 1), Quaternion.identity);
+        g1.transform.parent = gridPlace.transform;
     }
 
     // Update is called once per frame
