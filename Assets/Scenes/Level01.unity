@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.054343805, g: 0.048343472, b: 0.026716592, a: 1}
+  m_IndirectSpecularColor: {r: 0.054343715, g: 0.04834356, b: 0.026716823, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4584,6 +4584,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 8300000, guid: fb9482152e3f007458fb7b1cb3c7de36, type: 3}
+    - target: {fileID: 2248149056600971923, guid: 1fcb3aba14de43049b8cc6e0cf09bc0b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248149056600971923, guid: 1fcb3aba14de43049b8cc6e0cf09bc0b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1672394451, guid: 1fcb3aba14de43049b8cc6e0cf09bc0b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -16.300018
