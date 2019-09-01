@@ -39,6 +39,7 @@ public class ChestScripts : MonoBehaviour
         chest.SetActive(true);
         uimanger.OpenWindow();
         uimanger.idOfChest = ID;
+        uimanger.chest = this;
     }
   public void ReviledTheChest()
     {

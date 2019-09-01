@@ -13,7 +13,7 @@ public class DialogDisplay : MonoBehaviour
     public SpeakerUI speakerUIRight;
 
     private int activeLineIndex = 0;
-    private int currentSecret;
+    public int currentSecret;
 
     public UIManager uIManager;
     
@@ -24,15 +24,14 @@ public class DialogDisplay : MonoBehaviour
         speakerUILeft = speakerUILeft.GetComponent<SpeakerUI>();
         speakerUIRight = speakerUIRight.GetComponent<SpeakerUI>();
 
-        speakerUILeft.Speker = conversation[currentSecret].speakerLeft;
-        speakerUIRight.Speker = conversation[currentSecret].speakerRight;
     }
 
     // Update is called once per frame
     void Update()
     {
+        speakerUILeft.Speker = conversation[currentSecret].speakerLeft;
+        speakerUIRight.Speker = conversation[currentSecret].speakerRight;
         currentSecret = uIManager.idOfChest;
-        
     }
     public void AdvanceConversation()
     {

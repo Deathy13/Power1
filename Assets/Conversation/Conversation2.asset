@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc0593ab7512694b826cb4b7d3e7fae, type: 3}
   m_Name: Conversation2
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 0}
-  speakerRight: {fileID: 0}
-  lines: []
+  speakerLeft: {fileID: 11400000, guid: 43f2ed84b119444409276a84141eb034, type: 2}
+  speakerRight: {fileID: 11400000, guid: fe23b672e8ea495429e6b3f962fc9cdc, type: 2}
+  lines:
+  - charecter: {fileID: 11400000, guid: fe23b672e8ea495429e6b3f962fc9cdc, type: 2}
+    text: TEST How did you find out?
+  - charecter: {fileID: 11400000, guid: 43f2ed84b119444409276a84141eb034, type: 2}
+    text: ' It matters not how I found out! But I did. What say you?'
+  - charecter: {fileID: 11400000, guid: fe23b672e8ea495429e6b3f962fc9cdc, type: 2}
+    text: "They needed food\u2026 And the Royal Family has so much. I thought\u2026"
+  - charecter: {fileID: 11400000, guid: 43f2ed84b119444409276a84141eb034, type: 2}
+    text: I strip you of rank and title!

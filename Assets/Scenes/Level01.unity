@@ -1141,11 +1141,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fec7c34d73df945b90dacb9cc3e600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 11400000, guid: 2af46f28d4a57fd4c8d907809d1eda80, type: 2}
+  conversation:
+  - {fileID: 11400000, guid: 2af46f28d4a57fd4c8d907809d1eda80, type: 2}
+  - {fileID: 11400000, guid: ac72d2c8742e3444ead365222b6e2e12, type: 2}
+  - {fileID: 11400000, guid: c0793d0ddb6c5274e89b7c4fd0d528aa, type: 2}
   speakerLeft: {fileID: 256841230}
   speakerRight: {fileID: 1901359773}
   speakerUILeft: {fileID: 1901359775}
   speakerUIRight: {fileID: 256841232}
+  currentSecret: 0
   uIManager: {fileID: 492462549}
 --- !u!1001 &425449590
 PrefabInstance:
@@ -2335,7 +2339,7 @@ PrefabInstance:
     - target: {fileID: 2545231554987988623, guid: 918bc9fc8a7bca64680b0d23da0c5660,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2545231554987988623, guid: 918bc9fc8a7bca64680b0d23da0c5660,
         type: 3}
@@ -4027,36 +4031,6 @@ MonoBehaviour:
   portrait: {fileID: 1118030193}
   fullName: {fileID: 1883139200}
   dialog: {fileID: 143553014}
---- !u!1 &1927370949
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1927370950}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1927370950
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927370949}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.6, y: 9.1, z: 11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1971148616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4571,7 +4545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1672394451, guid: 1fcb3aba14de43049b8cc6e0cf09bc0b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.95002
+      value: 4.9500427
       objectReference: {fileID: 0}
     - target: {fileID: 1672394452, guid: 1fcb3aba14de43049b8cc6e0cf09bc0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

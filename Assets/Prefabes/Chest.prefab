@@ -4951,7 +4951,7 @@ MonoBehaviour:
   uimanger: {fileID: 0}
   particalSystem: {fileID: 1382888426}
   anim: {fileID: 8802451486191454410}
-  ID: 2
+  ID: 0
 --- !u!1001 &8802451486200954282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4962,10 +4962,6 @@ PrefabInstance:
     - target: {fileID: 100006, guid: 99e7c320bf125604a82ef735a1f630e0, type: 3}
       propertyPath: m_Name
       value: chest_animated
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 99e7c320bf125604a82ef735a1f630e0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 99e7c320bf125604a82ef735a1f630e0, type: 3}
       propertyPath: m_LocalPosition.x
