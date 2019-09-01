@@ -30,10 +30,14 @@ public class UIManager : MonoBehaviour
     }
     public void ShowDialoge()
     {
-        choice.SetActive(false);
-        dialog.AdvanceConversation();        
+        
+               
         chest.ReviledTheChest();
+        dialog.AdvanceConversation();
     }
-   
+   public void ContinueDialgue()
+    {
+        dialog.AdvanceConversation();
+    }
 
 }
