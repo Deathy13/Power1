@@ -8,12 +8,14 @@ public class CameraSC : MonoBehaviour
 {
 
     public Camera mainCamera;
+    private UIManager uiManager;
     public bool itHitGrid;
 
     // Start is called before the first frame update
     void Awake()
     {
         mainCamera = gameObject.GetComponent<Camera>();
+        uiManager = FindObjectOfType<UIManager>();
     }
 
     // Update is called once per frame
@@ -33,7 +35,8 @@ public class CameraSC : MonoBehaviour
             
             if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Chest")
             {
-                hit.transform.GetComponent<ChestScripts>().ChestVisble();
+                uiManager.chest = hit.transform.GetComponent<ChestScripts>();
+                uiManager.chest.ChestVisble();
             }
         }
     }

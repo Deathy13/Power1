@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc0593ab7512694b826cb4b7d3e7fae, type: 3}
   m_Name: Conversation1
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 11400000, guid: 516af1efe6d48aa43b29b28ee5bbd474, type: 2}
-  speakerRight: {fileID: 11400000, guid: 6d8f3a7b15ff0564b898210158f3147e, type: 2}
+  speakerLeft: {fileID: 11400000, guid: aab8a12f10388e246b2cb56a5a836e52, type: 2}
+  speakerRight: {fileID: 11400000, guid: 3be48f378fe716e418421a5def7c6475, type: 2}
   lines:
-  - charecter: {fileID: 11400000, guid: 516af1efe6d48aa43b29b28ee5bbd474, type: 2}
-    text: "I don\u2019t understand why you would do this?"
-  - charecter: {fileID: 11400000, guid: 516af1efe6d48aa43b29b28ee5bbd474, type: 2}
-    text: We could have worked together and sold the idea to Z Complex.
-  - charecter: {fileID: 11400000, guid: 516af1efe6d48aa43b29b28ee5bbd474, type: 2}
-    text: "We\u2019d both be on the mission now."
-  - charecter: {fileID: 11400000, guid: 6d8f3a7b15ff0564b898210158f3147e, type: 2}
-    text: "But I didn\u2019t steal your idea! (Yes I did)."
+  - charecter: {fileID: 11400000, guid: 3be48f378fe716e418421a5def7c6475, type: 2}
+    text: They know about Princess Ren ...
+  - charecter: {fileID: 11400000, guid: aab8a12f10388e246b2cb56a5a836e52, type: 2}
+    text: How could they know???
+  - charecter: {fileID: 11400000, guid: 3be48f378fe716e418421a5def7c6475, type: 2}
+    text: '....'
+  - charecter: {fileID: 11400000, guid: aab8a12f10388e246b2cb56a5a836e52, type: 2}
+    text: '...'

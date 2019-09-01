@@ -7,30 +7,33 @@ public class UIManager : MonoBehaviour
 {
     public GameObject choice;
     public DialogDisplay dialog;
+    public ChestScripts chest;
 
     public bool revil;
     public int idOfChest;
 
     public void Update()
     {
-        if (revil)
-        {
-            choice.SetActive(true);
-        }
+        //if (revil)
+        //{
+        //    choice.SetActive(true);
+        //}
     }
-
+    
     public void CloseWindow()
     {
         choice.SetActive(false);
     }
+    public void OpenWindow()
+    {
+        choice.SetActive(true);
+    }
     public void ShowDialoge()
     {
         choice.SetActive(false);
-        dialog.AdvanceConversation();
+        dialog.AdvanceConversation();        
+        chest.ReviledTheChest();
     }
-    public void FowrwardConversation()
-    {
-        dialog.AdvanceConversation();
-    }
+   
 
 }

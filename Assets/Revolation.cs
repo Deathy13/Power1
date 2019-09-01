@@ -20,7 +20,7 @@ public class Revolation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //currentSecret = uIManager.idOfChest;
+        currentSecret = uIManager.idOfChest;
         
         title.text = secrets[currentSecret].title;
         discription.text = secrets[currentSecret].discription;

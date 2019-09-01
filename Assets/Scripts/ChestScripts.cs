@@ -11,17 +11,13 @@ public class ChestScripts : MonoBehaviour
     public CameraSC cameraSC;    
     public UIManager uimanger;
     public GameObject particalSystem;
+    public Animator anim;
     public int ID;
 
-
-    private void Awake()
+    void Start()
     {
         cameraSC = GameObject.Find("Main Camera").GetComponent<CameraSC>();
         uimanger = GameObject.Find("UIManager").GetComponent<UIManager>();
-    }
-
-    void start()
-    {
         secondLight.SetActive(false);
         chest.SetActive(false);
     }
@@ -41,9 +37,14 @@ public class ChestScripts : MonoBehaviour
     {
         secondLight.SetActive(true);
         chest.SetActive(true);
-        uimanger.revil = true;
+        uimanger.OpenWindow();
         uimanger.idOfChest = ID;
     }
-  
+  public void ReviledTheChest()
+    {
+        ChestVisble();
+        anim.SetBool("ChestOpen", true);
+        particalSystem.SetActive(true);
+    }
 
 }

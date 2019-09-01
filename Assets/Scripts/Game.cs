@@ -48,9 +48,11 @@ public class Game : MonoBehaviour
         GameObject g = Instantiate(secret, gridPlace.position + new Vector3(0, Y_OFFSET, 0), Quaternion.identity);
         g.transform.parent = gridPlace.transform;
         chestScripts.ID = 0;
+
         GameObject g1 = Instantiate(secret, gridPlace.position + new Vector3(1.0f, Y_OFFSET, 1.0f), Quaternion.identity);
         g1.transform.parent = gridPlace.transform;
         chestScripts.ID = 1;
+
         GameObject g2 = Instantiate(secret, gridPlace.position + new Vector3(4.0f, Y_OFFSET, 1.0f), Quaternion.identity);
         g2.transform.parent = gridPlace.transform;
         chestScripts.ID = 2;

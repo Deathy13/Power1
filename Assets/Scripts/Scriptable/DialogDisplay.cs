@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogDisplay : MonoBehaviour
 {
-    public Conversation conversation;
+    public Conversation[] conversation;
 
     public GameObject speakerLeft;
     public GameObject speakerRight;
@@ -24,8 +24,8 @@ public class DialogDisplay : MonoBehaviour
         speakerUILeft = speakerUILeft.GetComponent<SpeakerUI>();
         speakerUIRight = speakerUIRight.GetComponent<SpeakerUI>();
 
-        speakerUILeft.Speker = conversation.speakerLeft;
-        speakerUIRight.Speker = conversation.speakerRight;
+        speakerUILeft.Speker = conversation[currentSecret].speakerLeft;
+        speakerUIRight.Speker = conversation[currentSecret].speakerRight;
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class DialogDisplay : MonoBehaviour
     }
     public void AdvanceConversation()
     {
-        if(activeLineIndex <conversation.lines.Length)
+        if(activeLineIndex < conversation[currentSecret].lines.Length)
         {
             DisplayLine();
             activeLineIndex += 1;
@@ -51,7 +51,7 @@ public class DialogDisplay : MonoBehaviour
     }
     void DisplayLine()
     {
-        Line line = conversation.lines[activeLineIndex];
+        Line line = conversation[currentSecret].lines[activeLineIndex];
         Charecter character = line.charecter;
         if (speakerUILeft.SpeakerIs(character))
         {
