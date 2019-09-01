@@ -47,7 +47,7 @@ public class ChestScripts : MonoBehaviour
     }
     void ChestVisble1()
     {
-        if (cameraSC.chestSelected == !cameraSC.chestSelected)
+        if (cameraSC.chestSelected)
         {
             
             secondLight.SetActive(true);           
