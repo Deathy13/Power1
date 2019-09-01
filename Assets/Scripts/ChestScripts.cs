@@ -22,18 +22,10 @@ public class ChestScripts : MonoBehaviour
 
     void start()
     {
+        secondLight.SetActive(false);
         chest.SetActive(false);
-        
-        
-
-
     }
 
-
-    void Update()
-    {       
-        ChestVisble1();        
-    }
     void OnMouseEnter()
     {
         Debug.Log("IToch chest");
@@ -45,23 +37,12 @@ public class ChestScripts : MonoBehaviour
        
         firstLight.SetActive(false);
     }
-    void ChestVisble1()
+   public void ChestVisble()
     {
-        if (cameraSC.chestSelected)
-        {
-            
-            secondLight.SetActive(true);           
-            chest.SetActive(true);
-            uimanger.revil = true;
-            uimanger.idOfChest = ID;
-
-        }
-        else
-        {
-            secondLight.SetActive(false);
-            chest.SetActive(false);
-
-        }
+        secondLight.SetActive(true);
+        chest.SetActive(true);
+        uimanger.revil = true;
+        uimanger.idOfChest = ID;
     }
   
 

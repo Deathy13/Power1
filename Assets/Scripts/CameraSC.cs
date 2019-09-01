@@ -9,7 +9,6 @@ public class CameraSC : MonoBehaviour
 
     public Camera mainCamera;
     public bool itHitGrid;
-    public bool chestSelected;
 
     // Start is called before the first frame update
     void Awake()
@@ -34,7 +33,7 @@ public class CameraSC : MonoBehaviour
             
             if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Chest")
             {
-                chestSelected = true;
+                hit.transform.GetComponent<ChestScripts>().ChestVisble();
             }
         }
     }
