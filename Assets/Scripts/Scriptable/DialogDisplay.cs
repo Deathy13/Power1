@@ -13,7 +13,10 @@ public class DialogDisplay : MonoBehaviour
     public SpeakerUI speakerUIRight;
 
     private int activeLineIndex = 0;
+    private int currentSecret;
 
+    public UIManager uIManager;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +31,10 @@ public class DialogDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space"))
-        {
-            AdvanceConversation();
-        }
+        currentSecret = uIManager.idOfChest;
+        
     }
-    void AdvanceConversation()
+    public void AdvanceConversation()
     {
         if(activeLineIndex <conversation.lines.Length)
         {
@@ -52,7 +53,7 @@ public class DialogDisplay : MonoBehaviour
     {
         Line line = conversation.lines[activeLineIndex];
         Charecter character = line.charecter;
-        if(speakerUILeft.SpeakerIs(character))
+        if (speakerUILeft.SpeakerIs(character))
         {
             SetDialog(speakerUILeft, speakerUIRight, line.text);
         }

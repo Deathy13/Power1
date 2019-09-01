@@ -27,6 +27,7 @@ public class CameraSC : MonoBehaviour
             Debug.Log("I on Grid");
 
         }
+       
         if (Input.GetMouseButtonDown(0))
         {
             

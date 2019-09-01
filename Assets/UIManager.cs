@@ -1,21 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    
-    
-    public bool secret1;
-    public bool secret2;
-    public bool secret3;
+    public GameObject choice;
+    public DialogDisplay dialog;
+
+    public bool revil;
+    public int idOfChest;
 
     public void Update()
     {
-        if(secret1)
+        if (revil)
         {
-            Debug.Log("Secrets");
+            choice.SetActive(true);
         }
+    }
+
+    public void CloseWindow()
+    {
+        choice.SetActive(false);
+    }
+    public void ShowDialoge()
+    {
+        choice.SetActive(false);
+        dialog.AdvanceConversation();
+    }
+    public void FowrwardConversation()
+    {
+        dialog.AdvanceConversation();
     }
 
 }
